@@ -1,15 +1,12 @@
-fun solicitarSexo() : String {
-
-    var sexo: String = "";
-
-    do {
-
-        println("Informe o sexo F para Feminino e M para Masculino:  ")
-
-        sexo = (readLine()!!.toString()).toUpperCase();
-
-    } while (!(sexo == "F" || sexo == "M"));
-
-    return sexo;
-
+fun main() {
+    print("Digite F para feminino ou M para masculino: ")
+    val letra = readLine()!!.toLowerCase();
+    println("")
+    if(letra == "f") {
+        println("Feminino")
+    } else if (letra == "m") {
+        println("Masculino")
+    }         else {
+        println("Sexo inválido")
+    }
 }

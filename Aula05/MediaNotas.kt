@@ -1,9 +1,8 @@
 fun main(){
 
-    println("Quanto vale sua hora? ")
+    println("Digite a nota 1 :")
     var nota1 = readLine()!!.toDouble()
-
-    println("Quantas horas voce trabalhou? ")
+    println("Digite a nota 2 :")
     var nota2 = readLine()!!.toDouble()
 
     println("Digite a nota 3 :")
