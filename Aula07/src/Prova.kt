@@ -1,8 +1,9 @@
 class Prova(var dificuldade:Int,var energiaNecessaria:Int) {
 
-    fun PodeRealizar(atleta: Atleta):Boolean{
-        if(atleta.nivel >= this.dificuldade && energiaNecessaria >= 1){
+    fun realizarProva(atleta: Atleta):Boolean{
+        if(atleta.nivel >= this.dificuldade && atleta.energia >= energiaNecessaria ){
 
+            atleta.energia -= energiaNecessaria
             return true
 
         }else{
