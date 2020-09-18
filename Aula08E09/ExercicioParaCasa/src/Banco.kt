@@ -5,8 +5,9 @@ class Banco : Imprimivel {
     lateinit var listaConta:ArrayList<ContaBancaria>
 
     override fun mostrarDados() {
-        for(i in 0..listaConta.size.toInt()-1){
-
+        for(i in 0..(listaConta.size.toInt())-1){
+             println("------------------")
+             listaConta[i].mostrarDados()
         }
     }
 
