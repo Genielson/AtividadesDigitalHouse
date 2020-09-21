@@ -2,7 +2,7 @@ class ContaPoupanca( numeroConta:Int, private var saldo:Double, private var limi
 
 
     override fun sacar(valor: Double):Boolean {
-        if(valor >= (this.saldo+this.limite)){
+        if(valor < (this.saldo+this.limite)){
             saldo -= valor
             return true
         }else{

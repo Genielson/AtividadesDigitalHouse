@@ -2,7 +2,7 @@ class ContaCorrente(numeroConta:Int, protected var saldo:Double, private val tax
 
 
     override fun sacar(valor: Double):Boolean {
-        if(valor > saldo + taxaDeOperacao) {
+        if(valor < saldo + taxaDeOperacao) {
             println("saldo insuficiente")
             return false
         }else{
