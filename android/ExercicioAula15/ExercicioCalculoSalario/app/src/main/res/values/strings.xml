@@ -1,0 +1,8 @@
+<resources>
+
+    <string name="app_name">ExercicioCalculoSalario</string>
+    <string name="horas_trabalhadas"><b>Horas Trabalhadas</b></string>
+    <string name="valor_da_hora"><b>Valor da hora</b></string>
+    <string name="valor_resultado"> %s </string>
+
+</resources>

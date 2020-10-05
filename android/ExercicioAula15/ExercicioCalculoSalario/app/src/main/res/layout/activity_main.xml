@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+
+        android:textSize="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/horas_trabalhadas"
+        android:textColor="#000"
+        android:layout_margin="30dp"
+
+        />
+
+
+    <EditText
+
+        android:id="@+id/campoHorasTrabalhada"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="180"
+        android:inputType="numberDecimal"
+
+        />
+
+    <TextView
+
+        android:textSize="20dp"
+        android:layout_margin="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/valor_da_hora"
+        android:textColor="#000"
+
+    />
+
+    <EditText
+
+        android:id="@+id/campovalorHora"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="15"
+        android:inputType="numberDecimal"
+
+        />
+
+
+    <Button
+
+        android:id="@+id/buttonCalcular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calcular"
+        android:background="#1E1BC9"
+        android:textColor="#FFF"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:paddingRight="20dp"
+        android:paddingLeft="20dp"
+
+        />
+
+    <TextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30dp"
+        android:layout_gravity="center"
+        android:id="@+id/txtResultado"
+        android:textColor="#000"
+        android:layout_marginTop="30dp"
+        />
+
+
+
+</LinearLayout>
