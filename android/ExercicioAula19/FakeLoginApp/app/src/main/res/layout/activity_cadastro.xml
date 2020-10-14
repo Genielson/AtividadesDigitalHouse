@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorWhite"
+    tools:context=".CadastroActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="sans-serif"
+        android:text="@string/sign_up"
+        android:textColor="@color/colorMain"
+        android:textSize="34sp"
+        android:layout_marginTop="80dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="40dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="sans-serif-light"
+        android:text="@string/for_your_account"
+        android:textColor="@color/colorMain"
+        android:textSize="16sp"
+        android:letterSpacing="0.3"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingEnd="30dp"
+        android:paddingStart="30dp"
+        android:layout_gravity="center|center_vertical">
+
+        <EditText
+            android:id="@+id/edtNameRegister"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/name"
+            android:singleLine="true"
+            android:inputType="text"
+            android:textColor="@color/colorMain"
+            android:textColorHint="@color/colorMain"
+            android:backgroundTint="@color/colorMain"/>
+
+
+        <EditText
+            android:id="@+id/edtLoginRegister"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/email"
+            android:textColor="@color/colorMain"
+            android:singleLine="true"
+            android:inputType="textEmailAddress"
+            android:textColorHint="@color/colorMain"
+            android:backgroundTint="@color/colorMain"/>
+
+        <EditText
+            android:id="@+id/edtPasswordRegister"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/password"
+            android:textColorHint="@color/colorMain"
+            android:backgroundTint="@color/colorMain"
+            android:textColor="@color/colorMain"
+            android:inputType="textPassword"
+            android:layout_marginTop="5dp"/>
+
+        <CheckBox
+            android:id="@+id/chkRegister"
+            android:layout_width="match_parent"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/colorMain"
+            android:layout_height="wrap_content"
+            android:text="@string/i_have_read_and_agree_the_privacy_policy"
+            />
+
+        <Button
+            android:id="@+id/btnRegister"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:textColor="@color/colorWhite"
+            android:layout_gravity="center"
+            android:text="@string/sign_up"
+            android:background="@color/colorMain"
+            android:textSize="16sp"
+            android:foreground="?android:attr/selectableItemBackgroundBorderless"
+            android:layout_marginTop="20dp"/>
+
+        <Button
+            android:id="@+id/btnLoginBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/Widget.AppCompat.Button.Borderless.Colored"
+            android:textColor="@color/colorMain"
+            android:background="@color/colorWhite"
+            android:text="@string/log_in_register"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"/>
+    </LinearLayout>
+
+
+</LinearLayout>
