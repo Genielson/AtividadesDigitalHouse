@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">SignInSignup</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="empty_email"> Preencha o campo nome </string>
+
+    <string name="empty_password"> Preencha o campo senha </string>
+    <string name="sign_up">Sign up</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="repeat_password">Repeat Password</string>
+
+    <string name="sigin"> Sign in </string>
+
+    <string name="signup">Sign up </string>
+
+    <string name="password_equals">  A senha informada não coincide com a anterior </string>
+</resources>
