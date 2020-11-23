@@ -1,5 +1,6 @@
 package com.example.exerciciochucknorris
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -8,6 +9,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.exerciciochucknorris.joke.view.JokeActivity
 import com.example.exerciciochucknorris.listcategories.repository.CategoriesRepository
 import com.example.exerciciochucknorris.listcategories.view.ListaCategoriesAdapter
 import com.example.exerciciochucknorris.listcategories.viewmodel.CategoriesViewModel
@@ -37,14 +39,21 @@ class MainActivity : AppCompatActivity() {
     fun obterListaCategorias(lista:List<String>){
 
         val manager = LinearLayoutManager(this)
-        val adapterCategoria = ListaCategoriesAdapter(lista)
+        val adapterCategoria = ListaCategoriesAdapter(lista){
+
+            var intent = Intent(this,JokeActivity::class.java)
+
+            intent.putExtra("category",it)
+
+            startActivity(intent)
+        }
 
         recyclerView.apply{
             setHasFixedSize(true)
             layoutManager = manager
             adapter = adapterCategoria
         }
-        
+
     }
 
 

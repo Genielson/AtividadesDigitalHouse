@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.exerciciochucknorris.R
 import kotlinx.android.synthetic.main.item_categoria.view.*
 
-class ListaCategoriesAdapter(private val lista:List<String>): RecyclerView.Adapter<ListaCategoriesAdapter.MeuViewHolder>() {
+class ListaCategoriesAdapter(private val lista:List<String> , private val listener : (String) -> Unit): RecyclerView.Adapter<ListaCategoriesAdapter.MeuViewHolder>() {
 
     class MeuViewHolder(view: View):RecyclerView.ViewHolder(view){
 
@@ -36,5 +36,10 @@ class ListaCategoriesAdapter(private val lista:List<String>): RecyclerView.Adapt
     override fun onBindViewHolder(holder: ListaCategoriesAdapter.MeuViewHolder, position: Int) {
         var item = lista[position]
         holder.bind(item)
+
+        holder.itemView.setOnClickListener {
+            listener(item)
+        }
+
     }
 }

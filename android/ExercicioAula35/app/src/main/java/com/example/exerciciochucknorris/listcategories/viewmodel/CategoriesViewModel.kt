@@ -11,22 +11,22 @@ import kotlinx.coroutines.Dispatchers
 
 class CategoriesViewModel(private var repository: CategoriesRepository):ViewModel() {
 
-    var listaCategorias = listOf<String>()
+    var itemJoke = listOf<String>()
 
     fun obterListaCategorias() = liveData<List<String>>(Dispatchers.IO){
 
         val response = repository.obterListaCategorias()
 
-        listaCategorias = response
+        var listaCategorias = response
 
         emit(response)
 
     }
 
 
-    class CategoryViewModelFactory(
-        private val repository: CategoriesRepository
+    class CategoryViewModelFactory(private val repository: CategoriesRepository
     ): ViewModelProvider.Factory{
+
         override fun <T : ViewModel?> create(modelClass: Class<T>): T {
             return CategoriesViewModel(repository) as T
         }

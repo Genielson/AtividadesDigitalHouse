@@ -7,9 +7,11 @@ class NetworkUtils {
 
     companion object{
 
-        fun getRetrofitInstance(baseUrl:String): Retrofit {
+        private const val BASE_URL = "https://api.chucknorris.io/jokes/"
 
-            return Retrofit.Builder().baseUrl(baseUrl).addConverterFactory(GsonConverterFactory.create()).build()
+        fun getRetrofitInstance(): Retrofit {
+
+            return Retrofit.Builder().baseUrl(BASE_URL).addConverterFactory(GsonConverterFactory.create()).build()
 
         }
 

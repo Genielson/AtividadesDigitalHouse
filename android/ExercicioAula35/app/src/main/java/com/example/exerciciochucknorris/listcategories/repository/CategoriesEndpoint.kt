@@ -10,10 +10,8 @@ interface CategoriesEndpoint {
 
     companion object{
 
-        const val  BASE_URL:String = "https://api.chucknorris.io/jokes/"
-
         val endpoint : CategoriesEndpoint by lazy {
-            NetworkUtils.getRetrofitInstance(BASE_URL).create(CategoriesEndpoint::class.java)
+            NetworkUtils.getRetrofitInstance().create(CategoriesEndpoint::class.java)
         }
 
     }
